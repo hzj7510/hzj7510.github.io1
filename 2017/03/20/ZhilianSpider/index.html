@@ -5,12 +5,37 @@
   
   <title>何小贱</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="最近在找工作，发现每天智联上招聘iOS的并不多，于是我就很好奇，是我投递的位置不对嘛？于是本着好奇心，于是决定爬取一下智联上相关的信息。同时也是第一次使用Scrapy，来这里也算是记录一下学习经过。
+言归正传，开始我们的表演。
+
+这里关与Scrapy、numpy、matplotlib的安装就不介绍了，可以去网上查一下。
+
+#####第一步，我们来创建一个Scrapy项目我们来看一下Scrapy文档">
+<meta property="og:type" content="article">
 <meta property="og:title" content="何小贱">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/2017/03/20/ZhilianSpider/index.html">
 <meta property="og:site_name" content="何小贱">
+<meta property="og:description" content="最近在找工作，发现每天智联上招聘iOS的并不多，于是我就很好奇，是我投递的位置不对嘛？于是本着好奇心，于是决定爬取一下智联上相关的信息。同时也是第一次使用Scrapy，来这里也算是记录一下学习经过。
+言归正传，开始我们的表演。
+
+这里关与Scrapy、numpy、matplotlib的安装就不介绍了，可以去网上查一下。
+
+#####第一步，我们来创建一个Scrapy项目我们来看一下Scrapy文档">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1503554-70926c5c27e4e11d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1503554-49b777b766585cbd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1503554-887d0c0433791415.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1503554-17fe0b3622400f27.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1503554-7632e540c753b0c3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2017-03-20T08:52:52.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="何小贱">
+<meta name="twitter:description" content="最近在找工作，发现每天智联上招聘iOS的并不多，于是我就很好奇，是我投递的位置不对嘛？于是本着好奇心，于是决定爬取一下智联上相关的信息。同时也是第一次使用Scrapy，来这里也算是记录一下学习经过。
+言归正传，开始我们的表演。
+
+这里关与Scrapy、numpy、matplotlib的安装就不介绍了，可以去网上查一下。
+
+#####第一步，我们来创建一个Scrapy项目我们来看一下Scrapy文档">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/1503554-70926c5c27e4e11d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
   
   
   <link href="/webfonts/ptserif/main.css" rel='stylesheet' type='text/css'>
@@ -38,8 +63,7 @@
     </div>
   </div>
 </header>
-    <section id="main" class="outer">
-      <article id="post-ZhilianSpider" class="article article-type-post" itemscope itemprop="blogPost">
+    <section id="main" class="outer"><article id="post-ZhilianSpider" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
     
@@ -328,56 +352,22 @@ Ok来执行以下
     </div>
     
     
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-    
-      <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+      <footer class="article-footer">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/18/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      <a href="/2017/03/18/hello-world/" class="article-date">
-  <time datetime="2017-03-17T23:52:58.000Z" itemprop="datePublished">2017-03-18</time>
-</a>
-      
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-    </div>
-    
+      </footer>
     
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/03/18/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hello World&nbsp;<span>&gt;</span></div>
+    </a>
+  
+</nav>
+
   
 </article>
 
@@ -387,8 +377,7 @@ Ok来执行以下
 
 
 
-
-    </section>
+</section>
     <footer id="footer">
   
   <div class="outer">
