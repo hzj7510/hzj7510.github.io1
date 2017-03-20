@@ -58,7 +58,7 @@
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1503554-62be3bab33013e66.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1503554-25ca13b42aa01241.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1503554-76dc4f4a9513dc96.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2017-03-20T09:35:13.000Z">
+<meta property="og:updated_time" content="2017-03-20T09:40:51.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="我把我知道的Scrapy都告诉你">
 <meta name="twitter:description" content="最近在找工作，发现每天智联上招聘iOS的并不多，于是我就很好奇，是我投递的位置不对嘛？于是本着好奇心，于是决定爬取一下智联上相关的信息。同时也是第一次使用Scrapy，来这里也算是记录一下学习经过。">
@@ -129,8 +129,9 @@
 <p>大概是这个样子。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">import scrapy</div><div class="line"></div><div class="line">class ZhilianSpider(scrapy.Spider):</div><div class="line">#排从需要的名字</div><div class="line"> name = &apos;zhilian_spider&apos;</div><div class="line">#开始的url</div><div class="line">    start_urls = [</div><div class="line">        &apos;&apos;</div><div class="line">    ]</div><div class="line"> </div><div class="line">    def parse(self,response):</div><div class="line">        print (response)</div></pre></td></tr></table></figure></p>
 <p><img src="http://upload-images.jianshu.io/upload_images/1503554-203de4178aa933ee.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
 <blockquote>
-<p>第三步，爬取的网页<br>接下来我们来看一下我们要爬取的网站。<br><img src="http://upload-images.jianshu.io/upload_images/1503554-17fe0b3622400f27.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"><br>我们可以看到城市智联有个更多，因为要获取所有城市的iOS的招聘数量，所以我们需要先爬取这个网<a href="http://www.zhaopin.com/citymap.html" target="_blank" rel="external">http://www.zhaopin.com/citymap.html</a><br>我们将这个网址放到我们的start_urls中。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">start_urls = [</div><div class="line">       &apos;http://www.zhaopin.com/citymap.html&apos;</div><div class="line">   ]</div></pre></td></tr></table></figure></p>
+<p>第三步，爬取的网页<br>接下来我们来看一下我们要爬取的网站。<br><img src="http://upload-images.jianshu.io/upload_images/1503554-17fe0b3622400f27.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
 </blockquote>
+<p>我们可以看到城市智联有个更多，因为要获取所有城市的iOS的招聘数量，所以我们需要先爬取这个网<a href="http://www.zhaopin.com/citymap.html" target="_blank" rel="external">http://www.zhaopin.com/citymap.html</a><br>我们将这个网址放到我们的start_urls中。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">start_urls = [</div><div class="line">       &apos;http://www.zhaopin.com/citymap.html&apos;</div><div class="line">   ]</div></pre></td></tr></table></figure></p>
 <p><img src="http://upload-images.jianshu.io/upload_images/1503554-adf85ba013ae3522.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"><br>这样我们的第一个Scrapy就算是写完了，这就完了？这才是开始，不要着急，我们可以先跑起来看看，给自己一些继续的动力。<br>我们先回到第一个子目录也就是包含scrapy.cfg这个文件夹下。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">bogon:zhilian_job mac$ ls</div><div class="line">__init__.py	middlewares.py	settings.py</div><div class="line">items.py	pipelines.py	spiders</div><div class="line">bogon:zhilian_job mac$ cd ..</div><div class="line">bogon:zhilian_job mac$ ls</div><div class="line">scrapy.cfg	zhilian_job</div></pre></td></tr></table></figure></p>
 <p><img src="http://upload-images.jianshu.io/upload_images/1503554-6f9bd98e8cb346b7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"><br>然后我们执行 scrapy crawl zhilian_spider</p>
 <p>####zhilian_spider ？ 好像在哪见过，是的，在我们ZhilianSpider类中的name 之前也有提过</p>
@@ -140,8 +141,10 @@
 <p><img src="http://upload-images.jianshu.io/upload_images/1503554-7dcd8f8e9d083cb0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"><br>再来运行一下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">bogon:zhilian_job mac$ scrapy crawl zhilian_spider</div></pre></td></tr></table></figure></p>
 <p><img src="http://upload-images.jianshu.io/upload_images/1503554-c4ae5a4966f61166.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"><br>OK~看到这个就放心了。</p>
 <blockquote>
-<p>第四步，解析数据<br>根据文档，我们可以使用xpath 或者 css来解析，其实貌似还可以使用BeautifulSoup，文档中极力推荐使用xpath，于是我们来用一下xpath。<br><a href="https://doc.scrapy.org/en/1.3/topics/selectors.html#using-selectors" target="_blank" rel="external">https://doc.scrapy.org/en/1.3/topics/selectors.html#using-selectors</a><br>可以来这里学习一下。<br><img src="http://upload-images.jianshu.io/upload_images/1503554-7632e540c753b0c3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"><br>然后在看一下结构。</p>
+<p>第四步，解析数据</p>
 </blockquote>
+<p>根据文档，我们可以使用xpath 或者 css来解析，其实貌似还可以使用BeautifulSoup，文档中极力推荐使用xpath，于是我们来用一下xpath。<br><a href="https://doc.scrapy.org/en/1.3/topics/selectors.html#using-selectors" target="_blank" rel="external">https://doc.scrapy.org/en/1.3/topics/selectors.html#using-selectors</a><br>可以来这里学习一下。<br><img src="http://upload-images.jianshu.io/upload_images/1503554-7632e540c753b0c3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
+<p>然后在看一下结构。</p>
 <p><img src="http://upload-images.jianshu.io/upload_images/1503554-6cb51a6baa530118.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"><br><img src="http://upload-images.jianshu.io/upload_images/1503554-618af501e7cb3d98.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
 <p>可以看到这是一个list嵌套一个list<br>OK，让我们来解析一下数据。<br>回到我们的spider中<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">bogon:zhilian_job mac$ vi zhilian_job/spiders/zhilian_spider.py</div></pre></td></tr></table></figure></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">def parse(self,response):</div><div class="line">	for citys in response.xpath(&apos;//div[@id=&quot;letter_choose&quot;]/dl/dd&apos;):</div><div class="line">		for city in citys.xpath(&apos;.//a&apos;):</div><div class="line">			#因为有可能有加粗的情况所以需要加个判断</div><div class="line">				if city.xpath(&apos;.//strong&apos;).extract_first() is not None:</div><div class="line">					city = city.xpath(&apos;.//strong&apos;)</div><div class="line">				ct = city.xpath(&apos;.//text()&apos;).extract_first()</div><div class="line">				print (ct)</div></pre></td></tr></table></figure>
@@ -150,8 +153,9 @@
 <p>OK，解析弄完之后我们看一下我们有没有获取到结果<br>回到包含scrapy.cfg的文件夹下执行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">bogon:zhilian_job mac$ scrapy crawl zhilian_spider</div></pre></td></tr></table></figure></p>
 <p>查看结果，发现确实打印了，我们需要的城市。<br><img src="http://upload-images.jianshu.io/upload_images/1503554-d76746c5d0e92e29.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"><br>我们离成功更近一步了。</p>
 <blockquote>
-<p>接下来第五步，我们获取城市还没完，我们还要查看招聘信息。<br>这之前需要说一个问题，就是之前说的parse这个方法的问题。其实我们看文档会发现，我们本可以不使用parse这个方法。</p>
+<p>接下来第五步，我们获取城市还没完，我们还要查看招聘信息。</p>
 </blockquote>
+<p>这之前需要说一个问题，就是之前说的parse这个方法的问题。其实我们看文档会发现，我们本可以不使用parse这个方法。</p>
 <p><img src="http://upload-images.jianshu.io/upload_images/1503554-7394e07b1686e36a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
 <p>这是文档中的一段，我们不难发现这里调用了<br>scrapy.Request(url = url ,callback=self.parse)<br>第一个参数就是我们想要请求的url。<br>第二个参数是我们需要回调的方法。</p>
 <p>通过这个方法我们可以做什么呢？我们来看一下搜索济南iOS的url是什么。<br><a href="http://sou.zhaopin.com/jobs/searchresult.ashx?jl=%E6%B5%8E%E5%8D%97&amp;kw=ios&amp;sm=0&amp;p=1" target="_blank" rel="external">http://sou.zhaopin.com/jobs/searchresult.ashx?jl=%E6%B5%8E%E5%8D%97&amp;kw=ios&amp;sm=0&amp;p=1</a><br>这里需要四个参数<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">jl 城市名称</div><div class="line">kw 搜索关键字</div><div class="line">sm = 0</div><div class="line">p page第几页，如果搜索结果又多页可修改此参数</div></pre></td></tr></table></figure></p>
@@ -171,7 +175,10 @@
 <p>运行一下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">scrapy crawl zhilian_spider</div></pre></td></tr></table></figure></p>
 <p><img src="http://upload-images.jianshu.io/upload_images/1503554-53ef2e6ca8fb84fd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
 <p>这里我中断了，因为已经看到了想要的数据。</p>
-<p>#####第七步 处理下一页问题<br>如果仔细分析，不难发现，我们只获取到了每个城市的第一页的数据，这很尴尬，如果有下一页怎么办，我们来处理一下。</p>
+<blockquote>
+<p>第七步 处理下一页问题</p>
+</blockquote>
+<p>如果仔细分析，不难发现，我们只获取到了每个城市的第一页的数据，这很尴尬，如果有下一页怎么办，我们来处理一下。</p>
 <p>先看一下网页，找到下一页<br><img src="http://upload-images.jianshu.io/upload_images/1503554-63c066290ab320bf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
 <p>让我们回调parse_jobs方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">#后去下一页的网址</div><div class="line">job_next = response.xpath(&apos;//a[@class=&quot;next-page&quot;]/@href&apos;).extract_first()</div><div class="line">#打印一下结果，因为之前并不知道job_next是什么值，所以打印一下看一下结果，发现如果没有就是None</div><div class="line">print (&quot;********&quot;,job_next)</div><div class="line">#如果有下一页就爬取下一页</div><div class="line">if job_next is not None:</div><div class="line">	#发送网络请求，并callback自己</div><div class="line">	yield scrapy.Request(url=job_next, callback=self.parse_jobs)</div></pre></td></tr></table></figure></p>
 <p><img src="http://upload-images.jianshu.io/upload_images/1503554-d3ab08afb569abc8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
@@ -197,8 +204,9 @@
 <p><img src="http://upload-images.jianshu.io/upload_images/1503554-e867b55740851d0b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
 <p>下面再说一下我们的需求<br>我们需要获取到每个城市的平均简历工资，我们需要获取到每个城市的招聘数量。</p>
 <blockquote>
-<p>下面开始我们的数据处理的第一步，去重<br>接下来我们要做的就是去重，依然使用pandas,我是在这篇文章中看到的。<a href="https://zhuanlan.zhihu.com/p/25473751？group_id=819874677425053696" target="_blank" rel="external">https://zhuanlan.zhihu.com/p/25473751？group_id=819874677425053696</a></p>
+<p>下面开始我们的数据处理的第一步，去重</p>
 </blockquote>
+<p>接下来我们要做的就是去重，依然使用pandas,我是在这篇文章中看到的。<a href="https://zhuanlan.zhihu.com/p/25473751？group_id=819874677425053696" target="_blank" rel="external">https://zhuanlan.zhihu.com/p/25473751？group_id=819874677425053696</a></p>
 <p><img src="http://upload-images.jianshu.io/upload_images/1503554-75228f0ed4febea5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
 <p>Ok来执行以下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">In [7]: items.drop_duplicates([&apos;job_name&apos;,&apos;job_position&apos;],keep=&apos;last&apos;,inplace=True)</div><div class="line"></div><div class="line">In [8]: items</div></pre></td></tr></table></figure></p>
 <p>神奇的事情发生了，32W + 变成了4k+，看到这里，我貌似明白了什么。</p>
@@ -220,8 +228,9 @@
 <p><img src="http://upload-images.jianshu.io/upload_images/1503554-b2f2f04b49bfca7f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
 <p>没问题，这正是我们想要的。</p>
 <blockquote>
-<p>第三步，数据整理<br>回到第一步使用ipython对items进行去重，这里就不重复了。</p>
+<p>第三步，数据整理</p>
 </blockquote>
+<p>回到第一步使用ipython对items进行去重，这里就不重复了。</p>
 <p>因为我们需要的是每个地区的所有招聘数量与平均工资，所以我们还需要对每个地区进行处理，还好在<a href="https://zhuanlan.zhihu.com/p/25473751?group_id=819874677425053696" target="_blank" rel="external">https://zhuanlan.zhihu.com/p/25473751?group_id=819874677425053696</a><br>这篇文章中我发现了一个叫做groupby的方法，貌似可以拿来用一下。</p>
 <p><img src="http://upload-images.jianshu.io/upload_images/1503554-fc87cf46121c1027.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
 <p>我们需要对position列进行分组，然后获取price的平均价格<br>这里是获取平均值的方法，<a href="http://www.aichengxu.com/python/16058.htm" target="_blank" rel="external">http://www.aichengxu.com/python/16058.htm</a></p>
@@ -234,9 +243,7 @@
 <p><img src="http://upload-images.jianshu.io/upload_images/1503554-2ed69f7c65c05d47.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
 <p>然后呢？我没看到图啊 ,文档输入完plot()就显示图了，为什么我没有？</p>
 <p><img src="http://upload-images.jianshu.io/upload_images/1503554-d1271616e055ba2f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
-<blockquote>
 <p>然后找了半天资料，发现需要执行一下plt.show()这也是为什么一开始带入头文件时说一定要有plt。</p>
-</blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">In [17]: plt.show()</div></pre></td></tr></table></figure>
 <p><img src="http://upload-images.jianshu.io/upload_images/1503554-a9301d729dd6f827.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
 <p>看到这张图的时候差点泪崩，文档有时候也骗人。不过仔细一看，就真的泪崩了，这是些啥？搞了这么就，就弄出来这个？其实细想其实是地区太多导致，显示不开。<br>于是我们可以改一下，只获取每个省的数量，这样的好处就是数量不多，同时，可以显示的开。于是回到spider中。</p>
