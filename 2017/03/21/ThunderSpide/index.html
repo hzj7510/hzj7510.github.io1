@@ -6,17 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2017/3 | __鲸_</title>
+  <title>听说迅雷美图要会员 | __鲸_</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="我爱故我在">
-<meta property="og:type" content="website">
-<meta property="og:title" content="__鲸_">
-<meta property="og:url" content="http://yoursite.com/archives/2017/03/index.html">
+  <meta name="description" content="挺早之前写的爬虫，今天来记录一下，无意间发现的迅雷小bug。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="听说迅雷美图要会员">
+<meta property="og:url" content="http://yoursite.com/2017/03/21/ThunderSpide/index.html">
 <meta property="og:site_name" content="__鲸_">
-<meta property="og:description" content="我爱故我在">
+<meta property="og:description" content="挺早之前写的爬虫，今天来记录一下，无意间发现的迅雷小bug。">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1503554-df43d085e75d0bd7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1503554-402efed20e8fa352.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1503554-04ab5a2bf37ab0b3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1503554-a1c077faaef5ab7c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1503554-4f1d67befccdba23.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2017-03-21T07:04:45.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="__鲸_">
-<meta name="twitter:description" content="我爱故我在">
+<meta name="twitter:title" content="听说迅雷美图要会员">
+<meta name="twitter:description" content="挺早之前写的爬虫，今天来记录一下，无意间发现的迅雷小bug。">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/1503554-df43d085e75d0bd7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
   
     <link rel="alternative" href="/atom.xml" title="__鲸_" type="application/atom+xml">
   
@@ -142,76 +149,157 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-ThunderSpide" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      听说迅雷美图要会员
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/21/ThunderSpide/" class="archive-article-date">
+
+        
+        <a href="/2017/03/21/ThunderSpide/" class="archive-article-date">
   	<time datetime="2017-03-21T07:03:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-21</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/21/ThunderSpide/">听说迅雷美图要会员</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>挺早之前写的爬虫，今天来记录一下，无意间发现的迅雷小bug。<br><a id="more"></a><br>想必用过迅雷的朋友都有体验，就是左边是下载信息，右边却是广告之类的。偶尔也会有些美女图片的推送，咳~，本着好奇的心里，我就点进去看了一下。<br>这是网址<a href="http://meitu.xunlei.com/index.html" target="_blank" rel="external">http://meitu.xunlei.com/index.html</a><br>然后发现，哇，好多美女啊。本着养眼的目标，我就往后看了看。突然发现个问题，有的图片只能看五张！五张！可恶啊。<br>比如这样的:</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1503554-df43d085e75d0bd7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
+<p>那段时间刚接触爬虫，然后看什么都想看看他的URL，都想看看他的HTML结构看看能不能爬取一下看看。<br>于是我点击鼠标右键，复制了图片网址，然后打开看了一下。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1503554-402efed20e8fa352.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
+<p>不经意间发现了一个奇怪的数字，1.jpg？难道还有2.jpg？。然后我又复制了第二张可看图片地址发现还真有2.jpg。</p>
+<p>让我们比较一下这两个网址:<br><a href="http://data.meitu.xunlei.com/data/image/suntiantian0922/1.jpg" target="_blank" rel="external">http://data.meitu.xunlei.com/data/image/suntiantian0922/1.jpg</a><br><a href="http://data.meitu.xunlei.com/data/image/suntiantian0922/2.jpg" target="_blank" rel="external">http://data.meitu.xunlei.com/data/image/suntiantian0922/2.jpg</a><br>除了末尾不一样，貌似没啥区别，如果改成6呢？</p>
+<p>问题就来了，他显示的这个。<br><img src="http://upload-images.jianshu.io/upload_images/1503554-04ab5a2bf37ab0b3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
+<p>本以为是巧合，结果我试了试其他的貌似也是这样。</p>
+<p>这样我是不是就可以把这一套都爬下来了，貌似是的，于是就写了一下程序。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">def pic_request(tup):</div><div class="line">	#通过tup[1]拿到一共多少张图</div><div class="line">	num = tup[1]</div><div class="line">	#通过tup[0]拿到套图名字</div><div class="line">	pic_name = tup[0]</div><div class="line">	#设置路径</div><div class="line">	path = pic_path + pic_name</div><div class="line">	#创建路径</div><div class="line">	os.chdir(path)</div><div class="line">	for i in range(int(num)):</div><div class="line">		#然后，发送请求然后保存图片</div><div class="line">		resp = requests.get(built_url(pic_name, i + 1))</div><div class="line">	    if resp is None:</div><div class="line">			raise &apos;Error&apos;</div><div class="line">		else:</div><div class="line">			filename = &apos;%s_%s.jpg&apos; % (pic_name, i + 1)</div><div class="line">		with open(filename, &apos;wb&apos;) as f:									</div><div class="line">			f.write(resp.content)</div></pre></td></tr></table></figure>
+<p>怎么才能拿到所有的图呢？很是好奇，于是找了一下，皇天不负有心人，在这里我发现了。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1503554-a1c077faaef5ab7c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
+<p>我么来解析一下这个js</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1503554-4f1d67befccdba23.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
+<p>这三个数据，大概就是我们需要的。</p>
+<p>需要就拿下来呗</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">#请求js拿到数据</div><div class="line">def requestAllUrl():</div><div class="line">	resp = requests.get(all_url, headers=headers)</div><div class="line">	jsontext = resp.content</div><div class="line">	#匹配拿到list中的数据</div><div class="line">	json_match = re.search(r&apos;\[.*\]&apos;, jsontext)</div><div class="line">	if json_match is None:</div><div class="line">		raise &apos;match Error&apos;</div><div class="line">	else:</div><div class="line">		json_a = json.loads(json_match.group())</div><div class="line">	if json_a is None:</div><div class="line">		raise &apos;json Error&apos;</div><div class="line">	else:</div><div class="line">		#返回数据</div><div class="line">		yield json_a</div></pre></td></tr></table></figure>
+<p>主程序中我们需要这样执行.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">def main():</div><div class="line">	try:</div><div class="line">		json_a = requestAllUrl()</div><div class="line">	except Exception as e:</div><div class="line">		print e		</div><div class="line">	#尝试使用多进程  		</div><div class="line">	p = Pool(4)</div><div class="line">	for dic in json_a:</div><div class="line">		try:</div><div class="line">			os.chdir(pic_path)</div><div class="line">	        title = dic[&apos;title&apos;]</div><div class="line">			match = re.search(r&apos;花絮$&apos;, title)</div><div class="line">			print match</div><div class="line">			if match is None and int(dic[&apos;totals&apos;]) != 1:</div><div class="line">				os.makedirs(dic[&apos;resource_id&apos;])</div><div class="line">				tup = (dic[&apos;resource_id&apos;], dic[&apos;totals&apos;])</div><div class="line">				#使用多进程异步请求，请求方法为pic_request方法</div><div class="line">				p.apply_async(pic_request, args=(tup,))</div><div class="line">	    except Exception as e:</div><div class="line">			    print e</div><div class="line">	p.close()</div><div class="line">	p.join()</div></pre></td></tr></table></figure>
+<p>ok这样我们就算完成了，然后就可以美美的看图了。</p>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>我爱故我在<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/03/21/ThunderSpide/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/20/ZhilianSpider/" class="archive-article-date">
-  	<time datetime="2017-03-20T09:25:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-20</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/20/ZhilianSpider/">我把我知道的Scrapy都告诉你</a>
-    </h1>
+  
+    <a href="/2017/03/20/ZhilianSpider/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">我把我知道的Scrapy都告诉你</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+  
+    <div class="duoshuo"></div>
   
 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -234,8 +322,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
