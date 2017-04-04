@@ -6,24 +6,45 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>(Python)听说迅雷美图要会员 | __鲸_</title>
+  <title>(iOS)我把我知道的MVVM都告诉你 | __鲸_</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="挺早之前写的爬虫，今天来记录一下，无意间发现的迅雷小bug。">
+  <meta name="description" content="写在文章之前，这是我第一次用MVVM来写小Demo。工作一年多才敢写MVVM，一来：从初次使用RAC到认识RAC就花了不少时间，二来：一直在思考如何去写MVVM。现在感觉时候到了，于是就写了这么一个Demo。我认为学习编程最直接的就是去仿写个什么东西，这样你就会发现很多问题，成长的才会更快。当然感觉现在写的也会有很多问题，希望大家指点，发出来的目的也是希望更多人看到，能给更多的建议。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="(Python)听说迅雷美图要会员">
-<meta property="og:url" content="http://yoursite.com/2017/03/21/ThunderSpide/index.html">
+<meta property="og:title" content="(iOS)我把我知道的MVVM都告诉你">
+<meta property="og:url" content="http://yoursite.com/2017/04/04/MVVM_JD/index.html">
 <meta property="og:site_name" content="__鲸_">
-<meta property="og:description" content="挺早之前写的爬虫，今天来记录一下，无意间发现的迅雷小bug。">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1503554-df43d085e75d0bd7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1503554-402efed20e8fa352.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1503554-04ab5a2bf37ab0b3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1503554-a1c077faaef5ab7c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1503554-4f1d67befccdba23.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2017-03-31T07:17:03.000Z">
+<meta property="og:description" content="写在文章之前，这是我第一次用MVVM来写小Demo。工作一年多才敢写MVVM，一来：从初次使用RAC到认识RAC就花了不少时间，二来：一直在思考如何去写MVVM。现在感觉时候到了，于是就写了这么一个Demo。我认为学习编程最直接的就是去仿写个什么东西，这样你就会发现很多问题，成长的才会更快。当然感觉现在写的也会有很多问题，希望大家指点，发出来的目的也是希望更多人看到，能给更多的建议。">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1503554-981e5388df3ca0e2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1503554-7c954a353b7aecf1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1503554-d3d265fda674b4bf.png">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1503554-b04415eb2e6905df.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1503554-e7e75982603eecf1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1503554-ee71c4d79c800188.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1503554-889051361978fd58.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1503554-2f2d7770c0d3362f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1503554-95e626f5fed09cc3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1503554-ee321ca762d22710.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1503554-1a9b6a89532739f8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1503554-54a236dbdb9fd416.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1503554-08c846ce8ba428ea.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1503554-bef1c9008cf1609c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1503554-f05f8da57fc4c268.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1503554-b9b729e4da858f3f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1503554-52f782d1b657136b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1503554-e10320094adb7f52.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1503554-62c522a9999c57ab.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1503554-24868eb1b47d7c18.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1503554-dcf133a42ee58716.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1503554-caaf90fcad38d4f2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1503554-3eea396dbe8d65f1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1503554-896c77dc986866e5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1503554-b50ef18b8d37cdd5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1503554-7524c5acfbd823f2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2017-04-04T02:41:10.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="(Python)听说迅雷美图要会员">
-<meta name="twitter:description" content="挺早之前写的爬虫，今天来记录一下，无意间发现的迅雷小bug。">
-<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/1503554-df43d085e75d0bd7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta name="twitter:title" content="(iOS)我把我知道的MVVM都告诉你">
+<meta name="twitter:description" content="写在文章之前，这是我第一次用MVVM来写小Demo。工作一年多才敢写MVVM，一来：从初次使用RAC到认识RAC就花了不少时间，二来：一直在思考如何去写MVVM。现在感觉时候到了，于是就写了这么一个Demo。我认为学习编程最直接的就是去仿写个什么东西，这样你就会发现很多问题，成长的才会更快。当然感觉现在写的也会有很多问题，希望大家指点，发出来的目的也是希望更多人看到，能给更多的建议。">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/1503554-981e5388df3ca0e2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
   
     <link rel="alternative" href="/atom.xml" title="__鲸_" type="application/atom+xml">
   
@@ -149,46 +170,160 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-ThunderSpide" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-MVVM_JD" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      (Python)听说迅雷美图要会员
+      (iOS)我把我知道的MVVM都告诉你
     </h1>
   
 
         
-        <a href="/2017/03/21/ThunderSpide/" class="archive-article-date">
-  	<time datetime="2017-03-21T07:03:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-21</time>
+        <a href="/2017/04/04/MVVM_JD/" class="archive-article-date">
+  	<time datetime="2017-04-04T02:41:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-04</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>挺早之前写的爬虫，今天来记录一下，无意间发现的迅雷小bug。<br><a id="more"></a><br>想必用过迅雷的朋友都有体验，就是左边是下载信息，右边却是广告之类的。偶尔也会有些美女图片的推送，咳~，本着好奇的心里，我就点进去看了一下。<br>这是网址<a href="http://meitu.xunlei.com/index.html" target="_blank" rel="external">http://meitu.xunlei.com/index.html</a><br>然后发现，哇，好多美女啊。本着养眼的目标，我就往后看了看。突然发现个问题，有的图片只能看五张！五张！可恶啊。<br>比如这样的:</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/1503554-df43d085e75d0bd7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
-<p>那段时间刚接触爬虫，然后看什么都想看看他的URL，都想看看他的HTML结构看看能不能爬取一下看看。<br>于是我点击鼠标右键，复制了图片网址，然后打开看了一下。</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/1503554-402efed20e8fa352.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
-<p>不经意间发现了一个奇怪的数字，1.jpg？难道还有2.jpg？。然后我又复制了第二张可看图片地址发现还真有2.jpg。</p>
-<p>让我们比较一下这两个网址:<br><a href="http://data.meitu.xunlei.com/data/image/suntiantian0922/1.jpg" target="_blank" rel="external">http://data.meitu.xunlei.com/data/image/suntiantian0922/1.jpg</a><br><a href="http://data.meitu.xunlei.com/data/image/suntiantian0922/2.jpg" target="_blank" rel="external">http://data.meitu.xunlei.com/data/image/suntiantian0922/2.jpg</a><br>除了末尾不一样，貌似没啥区别，如果改成6呢？</p>
-<p>问题就来了，他显示的这个。<br><img src="http://upload-images.jianshu.io/upload_images/1503554-04ab5a2bf37ab0b3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
-<p>本以为是巧合，结果我试了试其他的貌似也是这样。</p>
-<p>这样我是不是就可以把这一套都爬下来了，貌似是的，于是就写了一下程序。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">def pic_request(tup):</div><div class="line">	#通过tup[1]拿到一共多少张图</div><div class="line">	num = tup[1]</div><div class="line">	#通过tup[0]拿到套图名字</div><div class="line">	pic_name = tup[0]</div><div class="line">	#设置路径</div><div class="line">	path = pic_path + pic_name</div><div class="line">	#创建路径</div><div class="line">	os.chdir(path)</div><div class="line">	for i in range(int(num)):</div><div class="line">		#然后，发送请求然后保存图片</div><div class="line">		resp = requests.get(built_url(pic_name, i + 1))</div><div class="line">	    if resp is None:</div><div class="line">			raise &apos;Error&apos;</div><div class="line">		else:</div><div class="line">			filename = &apos;%s_%s.jpg&apos; % (pic_name, i + 1)</div><div class="line">		with open(filename, &apos;wb&apos;) as f:									</div><div class="line">			f.write(resp.content)</div></pre></td></tr></table></figure>
-<p>怎么才能拿到所有的图呢？很是好奇，于是找了一下，皇天不负有心人，在这里我发现了。</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/1503554-a1c077faaef5ab7c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
-<p>我么来解析一下这个js</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/1503554-4f1d67befccdba23.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
-<p>这三个数据，大概就是我们需要的。</p>
-<p>需要就拿下来呗</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">#请求js拿到数据</div><div class="line">def requestAllUrl():</div><div class="line">	resp = requests.get(all_url, headers=headers)</div><div class="line">	jsontext = resp.content</div><div class="line">	#匹配拿到list中的数据</div><div class="line">	json_match = re.search(r&apos;\[.*\]&apos;, jsontext)</div><div class="line">	if json_match is None:</div><div class="line">		raise &apos;match Error&apos;</div><div class="line">	else:</div><div class="line">		json_a = json.loads(json_match.group())</div><div class="line">	if json_a is None:</div><div class="line">		raise &apos;json Error&apos;</div><div class="line">	else:</div><div class="line">		#返回数据</div><div class="line">		yield json_a</div></pre></td></tr></table></figure>
-<p>主程序中我们需要这样执行.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">def main():</div><div class="line">	try:</div><div class="line">		json_a = requestAllUrl()</div><div class="line">	except Exception as e:</div><div class="line">		print e		</div><div class="line">	#尝试使用多进程  		</div><div class="line">	p = Pool(4)</div><div class="line">	for dic in json_a:</div><div class="line">		try:</div><div class="line">			os.chdir(pic_path)</div><div class="line">	        title = dic[&apos;title&apos;]</div><div class="line">			match = re.search(r&apos;花絮$&apos;, title)</div><div class="line">			print match</div><div class="line">			if match is None and int(dic[&apos;totals&apos;]) != 1:</div><div class="line">				os.makedirs(dic[&apos;resource_id&apos;])</div><div class="line">				tup = (dic[&apos;resource_id&apos;], dic[&apos;totals&apos;])</div><div class="line">				#使用多进程异步请求，请求方法为pic_request方法</div><div class="line">				p.apply_async(pic_request, args=(tup,))</div><div class="line">	    except Exception as e:</div><div class="line">			    print e</div><div class="line">	p.close()</div><div class="line">	p.join()</div></pre></td></tr></table></figure>
-<p>ok这样我们就算完成了，然后就可以美美的看图了。</p>
+        <p>写在文章之前，这是我第一次用MVVM来写小Demo。工作一年多才敢写MVVM，一来：从初次使用RAC到认识RAC就花了不少时间，二来：一直在思考如何去写MVVM。现在感觉时候到了，于是就写了这么一个Demo。我认为学习编程最直接的就是去仿写个什么东西，这样你就会发现很多问题，成长的才会更快。当然感觉现在写的也会有很多问题，希望大家指点，发出来的目的也是希望更多人看到，能给更多的建议。<br><a id="more"></a></p>
+<p>MVVM这个东西，看似神秘，其实本质与MVC没什么差别(这句话说的装逼了些)。</p>
+<blockquote>
+<p>首先要说明一下，用MVVM前，最好先了解一下RAC，查了很多资料，发现这两个基本是不分家的。其次就是，如果你合理使用RAC，即使你用的是MVC，也会减轻C很大的压力。所以RAC是个好东西，可惜我还不是很精通(这句话就很舒服了)。</p>
+</blockquote>
+<p>分享我知道的一个不错的视频:虽然时间比较早，但是都是精髓。<br><a href="https://pan.baidu.com/s/1hr8omLA" target="_blank" rel="external">https://pan.baidu.com/s/1hr8omLA</a><br>我是通过这个视频了解的RAC，但是我开始认识RAC的时候却是半年之后。所以大家不要着急，慢慢摸索。</p>
+<p>话不多说，进入正题，这里我们来模仿JD详情页来做一下。</p>
+<p>先来看一下界面</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1503554-981e5388df3ca0e2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
+<hr>
+<p><img src="http://upload-images.jianshu.io/upload_images/1503554-7c954a353b7aecf1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
+<p>当看到这两个界面的时候，我有点方了，好像没什么规律的样子。</p>
+<p>虽然我陆续看了好几个界面，突然意识到一件事，这大概跟数据有关，让我们来看一下数据，这里我们可以使用Charles青花瓷来抓取一下。</p>
+<p>####开始我们真正的第一步，数据抓取</p>
+<p>推荐Charles文章：<a href="http://blog.devtang.com/2015/11/14/charles-introduction/" target="_blank" rel="external">http://blog.devtang.com/2015/11/14/charles-introduction/</a><br><img src="http://upload-images.jianshu.io/upload_images/1503554-d3d265fda674b4bf.png" alt="Paste_Image.png"></p>
+<blockquote>
+<p>这里简单说一下，在你连接上后可能会发现有很多的数据上有一把小锁，这是在提醒你，你需要一个叫做SSL的证书，安装完成后，点击右键，然后点击一下Enbale SSL Proxying，然后重新抓取一下试试，像上图一样。</p>
+</blockquote>
+<p><img src="http://upload-images.jianshu.io/upload_images/1503554-b04415eb2e6905df.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
+<p>这里面就是我们需要的数据。</p>
+<blockquote>
+<p>不好意思写文章喜欢听歌，左下角是歌词，大家见谅。</p>
+</blockquote>
+<p>这两个文件就是我们需要的。</p>
+<p>如果只看第一个请求，你会发现标题山下英子并找不到，所以还需要下面的规格详情的请求。而且下面的这个请求里还包含了店铺信息，还有轮播图的信息。</p>
+<p>OK，数据有了，由于考虑到种种问题，我没有使用网络请求，所以我将数据都保存成了.json的文件，后续使用延时来模仿一下网络请求。</p>
+<p>于是就有了这几个文件。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1503554-e7e75982603eecf1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
+<p>这几个json在我们刚才抓的里面都有，大家可以找找看看。什么？你问我怎么知道的，我也不知道 ，我也是一个一个试的。</p>
+<p>####第二步，UI分析</p>
+<p>有了数据，接下来分析一下界面。<br>首先有几个是肯定有的</p>
+<ul>
+<li>轮播</li>
+<li>商品简介</li>
+<li>价格</li>
+<li>已选</li>
+<li>地址</li>
+<li>最下面的小标签</li>
+</ul>
+<p>我截了一张相对比较全的一张图</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1503554-ee71c4d79c800188.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
+<p>也就是说</p>
+<ul>
+<li>折扣</li>
+<li>优惠券</li>
+<li>促销</li>
+<li>作者 </li>
+<li>出版社</li>
+<li>电子版</li>
+</ul>
+<p>这些都是根据数据来的</p>
+<p>####第三步界面搭建</p>
+<p>OK，接下来就是比较复杂的搭建view。这里我就不一一介绍了，大家可以去github上去看一下我的。</p>
+<p>先来分析一下Views的目录</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1503554-889051361978fd58.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
+<p>说一下两个让我纠结很长时间的地方。</p>
+<p>1.一个是促销，让我纠结很久，如果使用tableview有些过于复杂，使用其他方式又如何实现自适应呢？<br>于是我使用的是Masonry的特性，根据数据使用for循环来创建多个label，然后更新self的Masonry，设置lastview的mas_bottom距离self为-15就像这样。<br><img src="http://upload-images.jianshu.io/upload_images/1503554-2f2d7770c0d3362f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
+<p>2.就是最后那些小标签怎么显示，使用collectionView？感觉也过于麻烦了，最后发现可以通过NSAttributedString来实现。</p>
+<p>这样问题貌似就都解决了。</p>
+<p>####第四步就是数据解析了</p>
+<p>我们先来创建Model，Model我推荐大家使用ESJSONFormat这个第三方插件。可以快速创建Models，方便的大家使用。本来像个大家截图，但是发现截图貌似有问题，那我就直接发一下目录截图吧。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1503554-95e626f5fed09cc3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
+<p>每个类里面都是ESJSONFormat生成的样式，没有做很多的修改，只是每个类的.m中加了setValue forUndefinedKey这个方法，用来防止发过来的数据键值对不全。</p>
+<p>View也有了Model也有了，其实大家会发现，在MVVM中View与Model基本是没有变化的，重点在于新添加的ViewModel与Controller之间的改变。</p>
+<p>####第五步，让我们看看我们可爱的ViewModel<br>首先，要明确的是ViewModel是将Controller中的数据处理抽取出来，以简化Controller的复杂度，于是我的理解是，从请求开始就要在ViewModel中了，于是我们需要模拟一下网络请求。<br><img src="http://upload-images.jianshu.io/upload_images/1503554-ee321ca762d22710.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">-(RACSignal *)setupModel&#123;</div><div class="line">	    @weakify(self);</div><div class="line">		    return [RACSignal createSignal:^RACDisposable *(id&lt;RACSubscriber&gt; subscriber) &#123;</div><div class="line">				@strongify(self);</div><div class="line">				[[RACSignal combineLatest:@[[self setupDescModel], [self setupAuthorModel], [self setupCommentModel], [self setupCouponModel], [self setupRecommendModel]]] subscribeNext:^(id x) &#123;</div><div class="line">									            </div><div class="line">					[self rebackDescModel];</div><div class="line">					[self rebackCommentModel];</div><div class="line">					[self rebackRecommendModel];</div><div class="line">					[self rebackShopModel];</div><div class="line">																					            RACTuple *tuple = [RACTuple tupleWithObjects: @([self rebackType]), nil];</div><div class="line">											</div><div class="line">					[subscriber sendNext:tuple];</div><div class="line">										</div><div class="line">				&#125;];</div><div class="line">				return nil;</div><div class="line">			&#125;];</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>setupModel是我们对外提供的接口，Controller通过调用setupModel方法来发送网络请求。由于有多个请求，所以这里使用combineLatest方法来监听所有请求都请求完成，方法里的reBack…，这几个方法是对数据的再次解析，只需要分解出界面需要的数据。</p>
+<p>下面我们用拿ProductSkuModel作为例子，看看每个Model的请求过程:</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1503554-1a9b6a89532739f8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">-(RACSignal *)setupDescModel&#123;</div><div class="line">	    return [RACSignal createSignal:^RACDisposable *(id&lt;RACSubscriber&gt; subscriber) &#123;</div><div class="line">			[[RACScheduler mainThreadScheduler]afterDelay:0.5 schedule:^&#123;</div><div class="line">				NSDictionary *dic = [self readJsonFile:@&quot;ProductDetailModel.json&quot;];</div><div class="line">				self.productInfo = [Wareinfo mj_objectWithKeyValues:dic[@&quot;wareInfo&quot;]];</div><div class="line">				[subscriber sendNext:@&quot;1&quot;];</div><div class="line">				[subscriber sendCompleted];</div><div class="line">	</div><div class="line">			&#125;];</div><div class="line">					        </div><div class="line">			return [RACDisposable disposableWithBlock:^&#123;</div><div class="line">								            </div><div class="line">			&#125;];</div><div class="line">		&#125;];</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>我们需要分析一下这个方法</p>
+<ul>
+<li>返回值：是一个RACSignal，signal作为RAC的核心，这里不多解释。</li>
+<li>参数： 由于我们没有实现真实的网络请求，这里就没有提供参数，如果真实项目可能需要传入itemId等。</li>
+<li>内容： 我们使用[[RACScheduler mainThreadScheduler]afterDelay:0.5 schedule:^{ }];来进行延时处理(加固RAC的使用)，大家也可以使用dispatch sleep来延时，效果一样。<br>然后通过文件读取方法读取文件，由于是json所以保存在dic中。<br>使用MJExtension来对json进行解析，这里可以去github上搜一下。<br>之后我们需要将解析完成的数据放到self.productInfo中，调用sendNext来发送信号</li>
+</ul>
+<p>为什么不直接将解析的数据直接send出去呢，考虑原因主要是因为，我们会发现我们会有多个网络请求，我们需要的是所有的网络请求都请求到后才统一对数据进行处理，而我们又不知道哪一个会先请求完。其次，使用RAC的combineLatest方法在分解id x的时候会比较复杂，所以这里我们直接保存到self中。</p>
+<p>由于需要先获取到数据，然后在根据数据来创建界面，哪些显示，哪些不显示，于是这里我们用到枚举，样子大概是这样。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1503554-54a236dbdb9fd416.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
+<p>屏幕小了些，请谅解。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line">typedef enum : NSUInteger &#123;</div><div class="line">	    PRODUCTVIEWTYPENONE = 1 &lt;&lt; 0,</div><div class="line">		/**</div><div class="line">		  *  自营</div><div class="line">		  */</div><div class="line">		PRODUCTVIEWTYPEWITHSELF= 1 &lt;&lt; 1,</div><div class="line">		/**</div><div class="line">		  *  全球购</div><div class="line">		  */</div><div class="line">		PRODUCTVIEWTYPEWITHGLOBAL = 1 &lt;&lt; 2,</div><div class="line">		/**</div><div class="line">		  *  是否有广告</div><div class="line">		  */</div><div class="line">		PRODUCTVIEWTYPEWITHAD = 1 &lt;&lt; 3,</div><div class="line">		/**</div><div class="line">		  *  打折优惠</div><div class="line">		  */</div><div class="line">		PRODUCTVIEWTYPEDISCOUNT = 1 &lt;&lt; 4,</div><div class="line">		/**</div><div class="line">		  *  原价</div><div class="line">		  */</div><div class="line">		PRODUCTVIEWTYPEMPRICE = 1 &lt;&lt; 5,</div><div class="line">		/**</div><div class="line">		  *  促销</div><div class="line">		  */</div><div class="line">		PRODUCTVIEWTYPEPROMOTION = 1 &lt;&lt; 6,</div><div class="line">		/**</div><div class="line">		  *  优惠券</div><div class="line">		  */</div><div class="line">		PRODUCTVIEWTYPECOUPON = 1 &lt;&lt; 7,</div><div class="line">		/**</div><div class="line">		  *  作者</div><div class="line">		  */</div><div class="line">		PRODUCTVIEWTYPEAUTHOR = 1 &lt;&lt; 8,</div><div class="line">		/**</div><div class="line">		  *  出版社</div><div class="line">		  */</div><div class="line">		PRODUCTVIEWTYPEPRESS = 1 &lt;&lt; 9,</div><div class="line">											    </div><div class="line">&#125; PRODUCTVIEWTYPE;</div></pre></td></tr></table></figure>
+<p>其次说一个比较尴尬的点，我没有找到自营与全球购的flag。于是程序运行没有显示。</p>
+<p>于是我们的ViewModel里就出现了这样的一个方法。根据数据如果有需要显示的就将其”或”到type里。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1503554-08c846ce8ba428ea.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
+<p>在setupModel中将这个类型sendNext出去。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1503554-bef1c9008cf1609c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
+<p>这里为什么要用到tuple呢，主要是考虑是否一起讲其他数据一起返回过去，后来发现如果一起返回过去就属于赋值了，而缺少了ViewModel与View的绑定。所以这里只返回了type。</p>
+<p>接下来就是比较关键的一个地方了，数据处理与绑定。</p>
+<p>我们以商品的广告位来举例。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1503554-f05f8da57fc4c268.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">//设置广告</div><div class="line">    NSMutableAttributedString *adAttributStr = nil;</div><div class="line">	    if (self.productInfo.ad.adword.length != 0) &#123;</div><div class="line">			adAttributStr = [[NSMutableAttributedString alloc]initWithString:self.productInfo.ad.adword];</div><div class="line">			NSRange range = [self.productInfo.ad.adword rangeOfString:self.productInfo.ad.adLinkContent];</div><div class="line">			[adAttributStr addAttribute:NSLinkAttributeName value:[NSURL URLWithString:self.productInfo.ad.adLink] range:range];</div><div class="line">			//广告价格赋值</div><div class="line">			self.ad = adAttributStr;</div><div class="line">		&#125;</div></pre></td></tr></table></figure>
+<p>首先我们根据adword的长度来判断是否有广告，如果有我们才会进一步处理。我们来看一下数据。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1503554-b9b729e4da858f3f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
+<p>广告内容在adword里，链接部分是adLinkContent，链接网址在adLink里，这是一个带有链接的string，所以我们使用adword给NSMutableAttributedString赋值，然后获取到adword在adLinkContent中的range，使用NSLinkAttributeName是range里的变为链接。</p>
+<p>到这里我们的数据处理就完成了，如果不适用ViewModel，这些代码我们就需要写在Controller中，Controller也就复杂了很多。</p>
+<p>处理完成我们需要在.h中将其公开。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1503554-52f782d1b657136b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
+<p>这样ViewModel里的工作也就算是处理完了。</p>
+<p>接下来就需要回到Controller里面，使用RACObserve来监听我们ViewModel里的每个值，使用RAC来给要赋值的View里各个控件的属性赋值即可。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1503554-e10320094adb7f52.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
+<p>这样我们在ViewModel中给ad赋值的时候，就会监听到，然后赋值给adLb的attributedText属性。</p>
+<p>经过这样的处理我们的Controller里的代码也没有过百行。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1503554-62c522a9999c57ab.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
+<p>OK，我知道的也就这么多了，如果有更好的方法，欢迎交流。</p>
+<blockquote>
+<p>写在最后,如果发现数据很乱，不是一个商品的，不要慌，为了测试一些东西，所以数据弄得乱了一些，不过还好不影响项目。</p>
+<p>写在最后的最后，项目里面会发现为什么轮播图没有显示，是这样的，这个东西，我调了好久，最后发现是因为webp图片个问题，而这个问题我想使用SDWebImage的SDWebImage/WebP来解决，可惜，网络不给力，提示下面的问题。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">[!] Error installing libwebp</div><div class="line">[!] /usr/bin/git clone https://chromium.googlesource.com/webm/libwebp /var/folders/qc/115mp6bj7hq0wjrmyqvhsvqm0000gn/T/d20170331-5309-1tf8x8d --single-branch --depth 1 --branch v0.5.0</div><div class="line"></div><div class="line">Cloning into &apos;/var/folders/qc/115mp6bj7hq0wjrmyqvhsvqm0000gn/T/d20170331-5309-1tf8x8d&apos;...</div><div class="line">fatal: unable to access &apos;https://chromium.googlesource.com/webm/libwebp/&apos;: Failed to connect to chromium.googlesource.com port 443: Operation timed out</div></pre></td></tr></table></figure>
+<p>大家不要急，待我弄好之后会回来更新的，我还会回来的！</p>
+<hr>
+<p>强势分割线，欢迎回来的我！</p>
+<hr>
+<p>清明时节雨纷纷，虽然没有下雨但是听着歌，也挺不错。</p>
+<p>言归正传，我们来解决一下webp格式问题，之前提到使用SDWebView无法解决webp格式图片问题。突然发现我误会人家了，人家提供了处理webp格式的方法。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1503554-24868eb1b47d7c18.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
+<p>来我们来翻译一下这句话的意思，默认只引入了Core，如果你需要Webp你需要明确引入，也就是需要在Podfile中需要添加<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pod &apos;SDWebImage/WebP&apos;</div></pre></td></tr></table></figure></p>
+<p>于是我们的Podfile变成了这样</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1503554-dcf133a42ee58716.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
+<p>恩，官网这么说，那就这么来吧。</p>
+<p>执行:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pod update --verbose --no-repo-update</div></pre></td></tr></table></figure></p>
+<p>如果你看了下面的界面，不要担心很正常。原因，连接googlesource失败，恩，谁让webp是人家google发明的呢，很开心，中国由于限制连不上google的。于是你需要一个终极的方法VPN，只有这个能拯救你。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1503554-caaf90fcad38d4f2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
+<p>使用后。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1503554-3eea396dbe8d65f1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
+<p>安装完成后，你需要看一个地方</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1503554-896c77dc986866e5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
+<p>如果你发现这里没有SD_WEBP=1需要加上，然后使用就很简单了。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1503554-b50ef18b8d37cdd5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
+<p>跟平时使用sd_webImage一样。运行！</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1503554-7524c5acfbd823f2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
+<p>到这里算是结束了。</p>
+<p>参考链接(这些才是真正的大神)：<br><a href="http://blog.leichunfeng.com/blog/2016/02/27/mvvm-with-reactivecocoa/" target="_blank" rel="external">http://blog.leichunfeng.com/blog/2016/02/27/mvvm-with-reactivecocoa/</a><br><a href="https://www.raywenderlich.com/74106/mvvm-tutorial-with-reactivecocoa-part-1" target="_blank" rel="external">https://www.raywenderlich.com/74106/mvvm-tutorial-with-reactivecocoa-part-1</a><br><a href="http://blog.leichunfeng.com/blog/2015/12/25/reactivecocoa-v2-dot-5-yuan-ma-jie-xi-zhi-jia-gou-zong-lan/" target="_blank" rel="external">http://blog.leichunfeng.com/blog/2015/12/25/reactivecocoa-v2-dot-5-yuan-ma-jie-xi-zhi-jia-gou-zong-lan/</a><br><a href="http://blog.devtang.com/2015/11/02/mvc-and-mvvm/" target="_blank" rel="external">http://blog.devtang.com/2015/11/02/mvc-and-mvvm/</a><br><a href="http://www.cocoachina.com/ios/20170213/18659.html" target="_blank" rel="external">http://www.cocoachina.com/ios/20170213/18659.html</a></p>
+<p>github地址:git@github.com:hzj7510/MVVM_JD.git<br>简书地址:<a href="http://www.jianshu.com/u/45626ab98f09" target="_blank" rel="external">http://www.jianshu.com/u/45626ab98f09</a></p>
 
       
 
@@ -268,7 +403,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/03/21/ThunderSpide/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/04/04/MVVM_JD/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -282,18 +417,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/04/04/MVVM_JD/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          (iOS)我把我知道的MVVM都告诉你
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/03/20/ZhilianSpider/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">(Python)我把我知道的Scrapy都告诉你</div>
+    <a href="/2017/03/21/ThunderSpide/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">(Python)听说迅雷美图要会员</div>
       <i class="icon-circle-right"></i>
     </a>
   
